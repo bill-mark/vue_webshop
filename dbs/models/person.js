@@ -1,4 +1,5 @@
-import mongoose from 'mongoose'
+//import mongoose from 'mongoose'
+const mongoose = require('mongoose')
 
 let personSchema = new mongoose.Schema({
 	name:String,
