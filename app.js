@@ -20,7 +20,12 @@ const users = require('./routes/users')
 
 // error handler
 onerror(app)
-
+app.keys = ['keys','keyskeys']
+app.use(session({
+	key:'mt',
+	prefix:'mtpr',
+	store:new Redis()
+}))
 // middlewares
 app.use(bodyparser({
   enableTypes:['json', 'form', 'text']

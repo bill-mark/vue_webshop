@@ -1,5 +1,6 @@
 function pv(ctx){
-	global.console.log('pv',ctx.path)
+	ctx.session.count++
+	global.console.log('中间件',ctx.path)
 }
 
 module.exports=function(){

@@ -1,7 +1,6 @@
 const router = require('koa-router')()
 
 router.get('/', async (ctx, next) => {
-  global.console.log('22299jj规划局')
   ctx.cookies.set('pvid',Math.random())
   await ctx.render('index', {
     title: 'Hello Koa is 2!'
