@@ -26,13 +26,14 @@ app.use(session({
 	prefix:'mtpr',
 	store:new Redis()
 }))
+
 // middlewares
 app.use(bodyparser({
   enableTypes:['json', 'form', 'text']
 }))
 app.use(pv())
 app.use(m1())
-// app.use(m2())
+app.use(m2())
 // app.use(m3())
 app.use(json())
 app.use(logger())

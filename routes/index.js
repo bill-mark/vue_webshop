@@ -11,13 +11,13 @@ router.get('/string', async (ctx, next) => {
   ctx.body = 'koa2 string'
 })
 
-router.get( '/json', async (ctx, next) => {
+router.get('/json', async (ctx, next) => {
   ctx.body = {
     title: 'koa2 json',
     cookis:ctx.cookies.get('pvid')
   }
 })
- 
+
 router.get('/testAsync',async(ctx)=>{
 	global.console.log('start',new Date().getTime())
 	const a = await new Promise((resolve,reject)=>{
