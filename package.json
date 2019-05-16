@@ -1,27 +1,23 @@
 {
-  "name": "koa2-learn",
-  "version": "0.1.0",
+  "name": "vue_webshop",
+  "version": "1.0.0",
+  "description": "My hunky-dory Nuxt.js project",
+  "author": "bill.mark",
   "private": true,
   "scripts": {
-    "start": "node bin/www",
-    "dev": "./node_modules/.bin/nodemon bin/www",
-    "prd": "pm2 start bin/www",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "cross-env NODE_ENV=development nodemon server/index.js --watch server",
+    "build": "nuxt build",
+    "start": "cross-env NODE_ENV=production node server/index.js",
+    "generate": "nuxt generate"
   },
   "dependencies": {
-    "debug": "^2.6.3",
-    "ejs": "~2.3.3",
-    "koa": "^2.2.0",
-    "koa-bodyparser": "^3.2.0",
-    "koa-convert": "^1.2.0",
-    "koa-json": "^2.0.2",
-    "koa-logger": "^2.0.1",
-    "koa-onerror": "^4.1.0",
-    "koa-router": "^7.1.1",
-    "koa-static": "^3.0.0",
-    "koa-views": "^5.2.1"
+    "cross-env": "^5.2.0",
+    "nuxt": "^2.4.0",
+    "koa": "^2.6.2",
+    "element-ui": "^2.4.11",
+    "@nuxtjs/axios": "^5.3.6"
   },
   "devDependencies": {
-    "nodemon": "^1.8.1"
+    "nodemon": "^1.18.9"
   }
 }
